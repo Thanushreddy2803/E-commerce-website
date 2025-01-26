@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirts - Next to Skin Fashion</title>
+    <link rel="shortcut icon" href="img/logo.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:300,700" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <style>
+      /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Filters Section */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.filters select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 22%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-info h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-info p {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-add-cart {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-add-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer h4 {
+    color: #ff6f00;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    padding: 5px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff6f00;
+}
+
+/* Hidden class for filters */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .product-card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 900px) {
+    .product-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        width: 100%;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters select {
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="grid">
+                <a href="Home.html">Home</a>
+                <div style="padding-top: 24px; text-align: right;">
+                    <span><a href="mycart.html">My Cart</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Filters Section -->
+        <div class="filters">
+            <select id="sizeFilter">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <select id="colorFilter">
+                <option value="">Select Color</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid" id="productGrid">
+            <div class="product-card" data-size="small" data-color="black" data-price="29.99">
+                <div class="product-img">
+                    <img src="product/tshirts/1.jpg" alt="Black T-shirt" />
+                </div>
+                <div class="product-info">
+                    <h4>Classic Black Shirt</h4>
+                    <p>$29.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="grid" id="productGrid">
+                <div class="product-card" data-size="small" data-color="green" data-price="29.99">
+                    <div class="product-img">
+                        <img src="product/tshirts/1.jpg" alt="Green shirt" />
+                    </div>
+                    <div class="product-info">
+                        <h4>Classic Green Shirt</h4>
+                        <p>$29.99</p>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+               
+
+            <!-- More shirts here -->
+        </div>
+    </main>
+
+    <footer>
+        <footer>
+            <div class="container">
+                <div class="grid">
+                    <h4>PRODUCTS</h4>
+                    <ul>
+                        <li>T-Shirts</li>
+                        <li>Jeans</li>
+                        <li>Shoes</li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <h4>LINKS</h4>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <h4>CONTACT</h4>
+                    <ul>
+                        <li>Email: support@example.com</li>
+                        <li>Phone: +123 456 789</li>
+                        <li>Address: 123 Fashion St.</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; padding: 16px;">
+                &copy; Copyright - Next to Skin Fashion 2025
+            </div>
+        </footer>
+    </footer>
+
+    <script>
+        // JavaScript to filter products based on size and color
+        document.getElementById('sizeFilter').addEventListener('change', filterProducts);
+        document.getElementById('colorFilter').addEventListener('change', filterProducts);
+
+        function filterProducts() {
+            const size = document.getElementById('sizeFilter').value.toLowerCase();
+            const color = document.getElementById('colorFilter').value.toLowerCase();
+
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => {
+                const productSize = product.getAttribute('data-size').toLowerCase();
+                const productColor = product.getAttribute('data-color').toLowerCase();
+
+                if ((size === '' || productSize === size) &&
+                    (color === '' || productColor === color)) {
+                    product.classList.remove('hidden');
+                } else {
+                    product.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

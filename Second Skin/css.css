@@ -1,0 +1,138 @@
+
+.Main-bar{
+    width: auto;
+    height: 75px;
+    /* background-color: aqua; */
+    border-radius: 5px;
+}
+.logo-login{
+    padding: 10px;
+}
+.banner {
+    background-image: url('https://via.placeholder.com/1920x300');
+    background-size: cove;
+    background-position: center;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Marquee effect for the text in the banner */
+.banner h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgb(8, 145, 138);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    animation: marquee 10s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Footer styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Exciting Offers Section */
+.offers {
+    background-color: #f0f8ff; /* Light blue background for a bright feel */
+    padding: 80px 0; /* Increase padding to enlarge the section */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.offers h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    border-radius: 15px 15px 0 0; /* Rounded top corners for the images */
+}
+
+.card-body {
+    padding: 25px;
+    background-color: #fff; /* White background for card body */
+}
+
+.card-body .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-body .card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card-body .btn {
+    background-color: #ff6f00; /* Brighter button color */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card-body .btn:hover {
+    background-color: #e65c00; /* Darker shade on hover */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Hover effect: lifts the card */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+ /* Customer Reviews Section */
+ .reviews {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.reviews h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.review-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.review-card .customer-name {
+    font-weight: bold;
+}
+
+.review-card .rating {
+    color: #f39c12;
+}

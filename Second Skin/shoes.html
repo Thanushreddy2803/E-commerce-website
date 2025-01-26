@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes - Next to Skin Fashion</title>
+    <link rel="shortcut icon" href="img/logo.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:300,700" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            width: 23%;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .product-info h4 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-info p {
+            color: #007bff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .btn-add-cart {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-add-cart:hover {
+            background-color: #0056b3;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .filters select,
+        .filters input[type="number"] {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 150px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer h4 {
+            color: #ff6f00;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="grid">
+                <a href="Home.html">Home</a>
+                <div style="padding-top: 24px; text-align: right;">
+                    <span><a href="mycart.html">My Cart</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Filters Section -->
+        <div class="filters">
+            <select id="sizeFilter">
+                <option value="">Select Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <select id="colorFilter">
+                <option value="">Select Color</option>
+                <option value="black">Black</option>
+                <option value="brown">Brown</option>
+                <option value="white">White</option>
+            </select>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid" id="productGrid">
+            <div class="product-card" data-size="medium" data-color="black" data-price="49.99">
+                <div class="product-img">
+                    <img src="product/shoes/1.jpg" alt="Black Shoe" />
+                </div>
+                <div class="product-info">
+                    <h4>Stylish Black Shoes</h4>
+                    <p>$49.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-size="large" data-color="brown" data-price="69.99">
+                <div class="product-img">
+                    <img src="product/shoes/2.jpg" alt="Brown Shoe" />
+                </div>
+                <div class="product-info">
+                    <h4>Comfortable Brown Shoes</h4>
+                    <p>$69.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-size="large" data-color="brown" data-price="69.99">
+                <div class="product-img">
+                    <img src="product/shoes/3.jpg" alt="Brown Shoe" />
+                </div>
+                <div class="product-info">
+                    <h4>Comfortable Brown Shoes</h4>
+                    <p>$69.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-size="large" data-color="Grey" data-price="69.99">
+                <div class="product-img">
+                    <img src="product/shoes/4.jpg" alt="Grey Shoe" />
+                </div>
+                <div class="product-info">
+                    <h4>Comfortable Grey Shoes</h4>
+                    <p>$69.99</p>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- More products here -->
+        </div>
+    </main>
+
+    <footer>
+        <footer>
+            <div class="container">
+                <div class="grid">
+                    <h4>PRODUCTS</h4>
+                    <ul>
+                        <li>T-Shirts</li>
+                        <li>Jeans</li>
+                        <li>Shoes</li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <h4>LINKS</h4>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <h4>CONTACT</h4>
+                    <ul>
+                        <li>Email: support@example.com</li>
+                        <li>Phone: +123 456 789</li>
+                        <li>Address: 123 Fashion St.</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; padding: 16px;">
+                &copy; Copyright - Next to Skin Fashion 2025
+            </div>
+        </footer>
+    </footer>
+
+    <script>
+        // JavaScript to filter products based on size and color
+        document.getElementById('sizeFilter').addEventListener('change', filterProducts);
+        document.getElementById('colorFilter').addEventListener('change', filterProducts);
+
+        function filterProducts() {
+            const size = document.getElementById('sizeFilter').value.toLowerCase();
+            const color = document.getElementById('colorFilter').value.toLowerCase();
+
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => {
+                const productSize = product.getAttribute('data-size').toLowerCase();
+                const productColor = product.getAttribute('data-color').toLowerCase();
+
+                if ((size === '' || productSize === size) &&
+                    (color === '' || productColor === color)) {
+                    product.classList.remove('hidden');
+                } else {
+                    product.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
